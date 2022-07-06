@@ -1,0 +1,15 @@
+{
+    "name": "sirclo/crud-web",
+    "autoload": {
+        "psr-4": {
+            "app\\": "./"
+        }
+    },
+    "authors": [
+        {
+            "name": "Reysyal",
+            "email": "reyke.syalramadhan@mail.sirclo.com"
+        }
+    ],
+    "require": {}
+}
