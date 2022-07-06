@@ -1,12 +1,5 @@
 <?php
 
-namespace app\Utility;
-
-use app\controllers\PageController;
-use app\models\Pasien;
-use app\models\User;
-use mysqli;
-
 class Database
 {
     private $_connection = null;
@@ -42,8 +35,7 @@ class Database
 
         if ($result->num_rows > 0) {
             $row = mysqli_fetch_assoc($result);
-            $pageController = new PageController();
-            $pageController->emailSession = $row['email'];
+            $_SESSION['email'] = $row['email'];
             return true;
         }
         return false;

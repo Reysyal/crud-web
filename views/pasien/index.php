@@ -1,10 +1,26 @@
-<?php include_once __DIR__.'/../partials/header.php' ?>
+<?php
+
+require_once(realpath (dirname(__FILE__)) . '/../../Utility/Database.php');
+require_once(realpath (dirname(__FILE__)) . '/../../Models/Pasien.php');
+include_once __DIR__.'/../partials/layout.php';
+include_once __DIR__.'/../partials/header.php';
+
+session_start();
+
+if (!isset($_SESSION['email'])) {
+    header('Location: /');
+}
+
+$database = new Database();
+$pasien = new Pasien();
+$pasien = $database->getPasien();
+?>
 
 <section class="flex justify-center mt-6">
     <div class="w-full w-4/5">
         <div class="flex justify-between items-center">
             <h2 class="mb-6 text-3xl font-bold tracking-tight px-6 text-red-600">Daftar Pasien Covid 19 di DKI Jakarta</h2>
-            <a href="/pasien/create" class="border-[3px] font-bold border-red-600 text-red-600 px-5 py-2 rounded-lg hover:bg-red-600 hover:text-white transition">Tambah Pasien</a>
+            <a href="/views/pasien/create.php" class="border-[3px] font-bold border-red-600 text-red-600 px-5 py-2 rounded-lg hover:bg-red-600 hover:text-white transition">Tambah Pasien</a>
         </div>
         <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
             <table class="w-full text-sm text-left">
@@ -57,8 +73,8 @@
                             <?php echo $item['hp'] ?>
                         </td>
                         <td class="px-6 py-4 text-right">
-                            <a href="/pasien/update?id=<?php echo $item['id'] ?>" class="font-medium text-blue-600 hover:underline mr-2">Edit</a>
-                            | <form method="post" action="/pasien/delete" style="display: inline-block">
+                            <a href="/views/pasien/update.php?id=<?php echo $item['id'] ?>" class="font-medium text-blue-600 hover:underline mr-2">Edit</a>
+                            | <form method="post" action="/views/pasien/delete.php" style="display: inline-block">
                                 <input  type="hidden" name="id" value="<?php echo $item['id'] ?>"/>
                                 <button type="submit" class="font-medium text-blue-600 hover:underline ml-2">Delete</button>
                             </form>

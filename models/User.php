@@ -1,9 +1,6 @@
 <?php
 
-namespace app\models;
-
-use app\controllers\PageController;
-use app\Utility\Database;
+require_once(realpath (dirname(__FILE__)) . '/../Utility/Database.php');
 
 class User
 {
