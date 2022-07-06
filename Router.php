@@ -2,6 +2,8 @@
 
 namespace app;
 
+use app\Utility\Database;
+
 class Router
 {
     public $getRoutes = [];

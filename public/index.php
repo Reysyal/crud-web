@@ -2,7 +2,7 @@
 
 require_once __DIR__.'/../vendor/autoload.php';
 
-use app\Database;
+use app\Utility\Database;
 use app\Router;
 use app\controllers\PageController;
 
@@ -16,12 +16,17 @@ if ($conn->connect_error) {
 
 $router = new Router($database);
 
-$router->get('/', [PageController::class, 'login']);
-$router->get('/products', [PageController::class, 'products']);
-$router->get('/products/create', [PageController::class, 'create']);
-$router->post('/products/create', [PageController::class, 'create']);
-$router->get('/products/update', [PageController::class, 'update']);
-$router->post('/products/update', [PageController::class, 'update']);
-$router->post('/products/delete', [PageController::class, 'delete']);
+$router->get('/', [PageController::class, 'pasien']);
+// $router->post('/', [PageController::class, 'login']);
+// $router->get('/login', [PageController::class, 'login']);
+// $router->post('/login', [PageController::class, 'login']);
+// $router->get('/register', [PageController::class, 'register']);
+// $router->post('/register', [PageController::class, 'register']);
+$router->get('/pasien', [PageController::class, 'pasien']);
+$router->get('/pasien/create', [PageController::class, 'create']);
+$router->post('/pasien/create', [PageController::class, 'create']);
+$router->get('/pasien/update', [PageController::class, 'update']);
+$router->post('/pasien/update', [PageController::class, 'update']);
+$router->post('/pasien/delete', [PageController::class, 'delete']);
 
 $router->resolve();
