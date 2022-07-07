@@ -15,6 +15,7 @@ $database = new Database();
 $pasien = new Pasien();
 $pasien = $database->getPasien();
 ?>
+<title>Vaksin | Daftar Pasien</title>
 
 <section class="flex justify-center mt-6">
     <div class="w-full w-4/5">

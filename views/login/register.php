@@ -21,6 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 
 ?>
+<title>Vaksin | Register</title>
 
 <section class="flex h-screen items-center justify-center bg-gray-100">
     <div class="py-6 lg:rounded-2xl bg-white drop-shadow-2xl w-11/12 md:w-2/4 lg:w-2/5 xl:w-[30%]">

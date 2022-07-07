@@ -23,6 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $error = "Wrong <span class='font-bold'>e-mail</span> or <span class='font-bold'>password!</span>!";
 }
 ?>
+<title>Vaksin | Login</title>
 
 <section class="flex h-screen items-center justify-center bg-gray-100">
     <div class="py-6 lg:rounded-2xl bg-white drop-shadow-2xl w-11/12 md:w-2/4 lg:w-2/5 xl:w-[30%]">
