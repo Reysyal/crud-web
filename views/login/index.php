@@ -8,6 +8,8 @@ if (isset($_SESSION['email'])) {
     header("Location: /views/pasien");
 }
 
+$error = '';
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $dataUser['email'] = $_POST['email'];
     $dataUser['password'] = $_POST['password'];
@@ -18,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         header('Location: /views/pasien');
     }
     else 
-        header('Location: /views/login');
+        $error = "Wrong <span class='font-bold'>e-mail</span> or <span class='font-bold'>password!</span>!";
 }
 ?>
 
@@ -27,6 +29,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <form method="POST">
             <h2 class="mb-2 text-3xl font-bold tracking-tight px-6">Login</h2>
             <hr class="my-5" />
+            <?php if(!empty($error)) : ?>
+                <div class="p-4 mb-4 text-sm text-red-700 bg-red-100 dark:bg-red-200 dark:text-red-800" role="alert">
+                    <span class="font-medium"><?php echo $error ?></span>
+                </div>
+            <?php endif ?>
             <div class="mb-6 px-6">
                 <label for="email" class="block mb-2 text-sm font-medium text-gray-900">Your email</label>
                 <input type="email" id="email" name="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" required>
