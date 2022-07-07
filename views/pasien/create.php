@@ -29,6 +29,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <?php include_once __DIR__.'/../partials/layout.php' ?>
 <?php include_once __DIR__.'/../partials/header.php' ?>
 
+<title>Vaksin | Tambah Pasien</title>
+
 <section class="flex justify-center">
     <div class="py-6 bg-white w-11/12 md:w-2/4 lg:w-2/5 xl:w-[30%]">
         <h2 class="mb-2 text-3xl font-bold tracking-tight px-6 text-red-600">Tambah Pasien</h2>
