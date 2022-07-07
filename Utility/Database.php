@@ -5,10 +5,10 @@ class Database
     private $_connection = null;
     private static $_instance;
 
-    const _DB_HOST = '127.0.0.1:3310';
-    const _DB_USER = 'root';
-    const _DB_PASS = '';
-    const _DB_NAME = 'php_crud';
+    const _DB_HOST = 'localhost';
+    const _DB_USER = 'id19229840_root';
+    const _DB_PASS = '_=MeH2nlI<p8\&{V';
+    const _DB_NAME = 'id19229840_vaksin';
 
     public static function getInstance() 
     {
