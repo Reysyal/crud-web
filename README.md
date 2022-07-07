@@ -38,4 +38,4 @@ Di halaman ini bertujuan untuk menghapus data pasien yang terdaftar
 
 5. RESTI NOVIA PRATIWI, Sebagai pembuat Planning deskripsi program.
 
-6. TB. FAHMI MUHARROM, Sebagai pembuat Planning deskripsi progra
+6. TB. FAHMI MUHARROM, Sebagai pembuat Planning deskripsi program.
